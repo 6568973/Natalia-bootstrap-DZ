@@ -1,0 +1,315 @@
+Arthurs-iMac:~ gas_cas$ cd lesson5
+Arthurs-iMac:lesson5 gas_cas$ rails generate scaffold author name: string surname:string year:intiger
+Running via Spring preloader in process 30673
+      invoke  active_record
+      create    db/migrate/20180617185001_create_authors.rb
+      create    app/models/author.rb
+      invoke    test_unit
+      create      test/models/author_test.rb
+      create      test/fixtures/authors.yml
+      invoke  resource_route
+       route    resources :authors
+      invoke  scaffold_controller
+      create    app/controllers/authors_controller.rb
+      invoke    erb
+      create      app/views/authors
+      create      app/views/authors/index.html.erb
+      create      app/views/authors/edit.html.erb
+      create      app/views/authors/show.html.erb
+      create      app/views/authors/new.html.erb
+      create      app/views/authors/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/authors_controller_test.rb
+      invoke    helper
+      create      app/helpers/authors_helper.rb
+      invoke      test_unit
+      invoke    jbuilder
+      create      app/views/authors/index.json.jbuilder
+      create      app/views/authors/show.json.jbuilder
+      create      app/views/authors/_author.json.jbuilder
+      invoke  test_unit
+      create    test/system/authors_test.rb
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/authors.coffee
+      invoke    scss
+      create      app/assets/stylesheets/authors.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.scss
+Arthurs-iMac:lesson5 gas_cas$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	.gitignore
+	Gemfile
+	Gemfile.lock
+	README.md
+	Rakefile
+	app/
+	bin/
+	config.ru
+	config/
+	db/
+	lib/
+	log/
+	package.json
+	public/
+	test/
+	tmp/
+	vendor/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Arthurs-iMac:lesson5 gas_cas$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+Arthurs-iMac:lesson5 gas_cas$ git add .
+Arthurs-iMac:lesson5 gas_cas$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .gitignore
+	new file:   Gemfile
+	new file:   Gemfile.lock
+	new file:   README.md
+	new file:   Rakefile
+	new file:   app/assets/config/manifest.js
+	new file:   app/assets/images/.keep
+	new file:   app/assets/javascripts/application.js
+	new file:   app/assets/javascripts/authors.coffee
+	new file:   app/assets/javascripts/cable.js
+	new file:   app/assets/javascripts/channels/.keep
+	new file:   app/assets/stylesheets/application.css
+	new file:   app/assets/stylesheets/authors.scss
+	new file:   app/assets/stylesheets/scaffolds.scss
+	new file:   app/channels/application_cable/channel.rb
+	new file:   app/channels/application_cable/connection.rb
+	new file:   app/controllers/application_controller.rb
+	new file:   app/controllers/authors_controller.rb
+	new file:   app/controllers/concerns/.keep
+	new file:   app/helpers/application_helper.rb
+	new file:   app/helpers/authors_helper.rb
+	new file:   app/jobs/application_job.rb
+	new file:   app/mailers/application_mailer.rb
+	new file:   app/models/application_record.rb
+	new file:   app/models/author.rb
+	new file:   app/models/concerns/.keep
+	new file:   app/views/authors/_author.json.jbuilder
+	new file:   app/views/authors/_form.html.erb
+	new file:   app/views/authors/edit.html.erb
+	new file:   app/views/authors/index.html.erb
+	new file:   app/views/authors/index.json.jbuilder
+	new file:   app/views/authors/new.html.erb
+	new file:   app/views/authors/show.html.erb
+	new file:   app/views/authors/show.json.jbuilder
+	new file:   app/views/layouts/application.html.erb
+	new file:   app/views/layouts/mailer.html.erb
+	new file:   app/views/layouts/mailer.text.erb
+	new file:   bin/bundle
+	new file:   bin/rails
+	new file:   bin/rake
+	new file:   bin/setup
+	new file:   bin/spring
+	new file:   bin/update
+	new file:   bin/yarn
+	new file:   config.ru
+	new file:   config/application.rb
+	new file:   config/boot.rb
+	new file:   config/cable.yml
+	new file:   config/database.yml
+	new file:   config/environment.rb
+	new file:   config/environments/development.rb
+	new file:   config/environments/production.rb
+	new file:   config/environments/test.rb
+	new file:   config/initializers/application_controller_renderer.rb
+	new file:   config/initializers/assets.rb
+	new file:   config/initializers/backtrace_silencers.rb
+	new file:   config/initializers/cookies_serializer.rb
+	new file:   config/initializers/filter_parameter_logging.rb
+	new file:   config/initializers/inflections.rb
+	new file:   config/initializers/mime_types.rb
+	new file:   config/initializers/wrap_parameters.rb
+	new file:   config/locales/en.yml
+	new file:   config/puma.rb
+	new file:   config/routes.rb
+	new file:   config/secrets.yml
+	new file:   config/spring.rb
+	new file:   db/migrate/20180617185001_create_authors.rb
+	new file:   db/seeds.rb
+	new file:   lib/assets/.keep
+	new file:   lib/tasks/.keep
+	new file:   log/.keep
+	new file:   package.json
+	new file:   public/404.html
+	new file:   public/422.html
+	new file:   public/500.html
+	new file:   public/apple-touch-icon-precomposed.png
+	new file:   public/apple-touch-icon.png
+	new file:   public/favicon.ico
+	new file:   public/robots.txt
+	new file:   test/application_system_test_case.rb
+	new file:   test/controllers/.keep
+	new file:   test/controllers/authors_controller_test.rb
+	new file:   test/fixtures/.keep
+	new file:   test/fixtures/authors.yml
+	new file:   test/fixtures/files/.keep
+	new file:   test/helpers/.keep
+	new file:   test/integration/.keep
+	new file:   test/mailers/.keep
+	new file:   test/models/.keep
+	new file:   test/models/author_test.rb
+	new file:   test/system/.keep
+	new file:   test/system/authors_test.rb
+	new file:   test/test_helper.rb
+	new file:   tmp/.keep
+	new file:   vendor/.keep
+
+Arthurs-iMac:lesson5 gas_cas$ rails s
+=> Booting Puma
+=> Rails 5.1.6 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.11.4 (ruby 2.5.1-p57), codename: Love Song
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/authors" for 127.0.0.1 at 2018-06-17 15:11:26 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/authors" for 127.0.0.1 at 2018-06-17 15:25:50 -0400
+   (0.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/authors" for 127.0.0.1 at 2018-06-17 15:25:54 -0400
+   (0.1ms)  SELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.6) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.6) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+
