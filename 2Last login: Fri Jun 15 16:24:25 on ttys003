@@ -1,0 +1,82 @@
+Last login: Fri Jun 15 16:24:25 on ttys003
+Arthurs-iMac:lesson5 gas_cas$ rake db:migrate
+== 20180617185001 CreateAuthors: migrating ====================================
+-- create_table(:authors)
+rake aborted!
+StandardError: An error has occurred, this and all later migrations canceled:
+
+undefined method `intiger' for #<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x00007f8d83792b48>
+Did you mean?  integer
+/Users/gas_cas/lesson5/db/migrate/20180617185001_create_authors.rb:7:in `block in change'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/schema_statements.rb:282:in `create_table'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:849:in `block in method_missing'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:818:in `block in say_with_time'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:818:in `say_with_time'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:838:in `method_missing'
+/Users/gas_cas/lesson5/db/migrate/20180617185001_create_authors.rb:3:in `change'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:792:in `exec_migration'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:775:in `block in migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:774:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:953:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/transactions.rb:210:in `transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1298:in `ddl_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1200:in `each'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1150:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1007:in `up'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:985:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/bin/ruby_executable_hooks:15:in `eval'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/bin/ruby_executable_hooks:15:in `<main>'
+
+Caused by:
+NoMethodError: undefined method `intiger' for #<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x00007f8d83792b48>
+Did you mean?  integer
+/Users/gas_cas/lesson5/db/migrate/20180617185001_create_authors.rb:7:in `block in change'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/schema_statements.rb:282:in `create_table'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:849:in `block in method_missing'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:818:in `block in say_with_time'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:818:in `say_with_time'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:838:in `method_missing'
+/Users/gas_cas/lesson5/db/migrate/20180617185001_create_authors.rb:3:in `change'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:792:in `exec_migration'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:776:in `block (2 levels) in migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:775:in `block in migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/connection_pool.rb:408:in `with_connection'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:774:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:953:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1230:in `block in execute_migration_in_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1298:in `block in ddl_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `block in transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:194:in `block in within_new_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/transaction.rb:191:in `within_new_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/connection_adapters/abstract/database_statements.rb:235:in `transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/transactions.rb:210:in `transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1298:in `ddl_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1229:in `execute_migration_in_transaction'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1201:in `block in migrate_without_lock'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1200:in `each'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1200:in `migrate_without_lock'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1150:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:1007:in `up'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/migration.rb:985:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/tasks/database_tasks.rb:171:in `migrate'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/activerecord-5.1.6/lib/active_record/railties/databases.rake:58:in `block (2 levels) in <top (required)>'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/gems/rake-12.3.1/exe/rake:27:in `<top (required)>'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/bin/ruby_executable_hooks:15:in `eval'
+/Users/gas_cas/.rvm/gems/ruby-2.5.1@rails_last/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => db:migrate
+(See full trace by running task with --trace)
+Arthurs-iMac:lesson5 gas_cas$ 
